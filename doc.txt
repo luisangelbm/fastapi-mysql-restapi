@@ -1,0 +1,44 @@
+ENTORNO VIRTUAL:
+    virtualenv -p python3 env
+
+MODULOS:
+    pip install fastapi         
+    pip install uvicorn                 #para ejecutar la aplicion en el servidor
+    pip install cryptography
+    pip install sqlalchemy
+    pip install pymysql
+
+PARA INICIAR EL SERVIDOR:
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    *en el CMD:  >uvicorn app:app       # se activa en el puerto 8000 por defecto
+
+
+CREAMOS UNA CARPETA "routes":
+    para crear url como el @app.get('/')
+
+
+
+CREAMOS UNA CARPETA "models":
+    sirve para guardar los models de datos que se guardaran en la db
+
+
+
+
+CREAMOS UNA CARPETA "schemas":
+    sirve para definir los tipos de datos
+
+
+
+
+CREAMOS UNA CARPETA "config":
+    sirve para configurar la conexion a la base de datos
+        * agregamos un archivo "db.py"   para hacer las conexiones con sqlalchemy
+        * pip install sqlalchemy
+        * pip install pymysql
+
+
+
+PARA QUE EL SERVIDOR SE REINICIE SOLO USAR EL COMANDO:
+    >uvicorn app:app --reload                   #para activar el servidor
